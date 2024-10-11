@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function happyBirthday(name, age) {
+            console.log("Happy Birthday to you!");
+            console.log(`Happy Birthday ${name}`);
+            console.log("Happy Birthday to you!");
+            console.log(`You are now ${age}`);
+        }
+
+        happyBirthday('Michael', 25);
+        happyBirthday('Spongebob',30);
+
+        function add(x, y) {
+            return x + y;
+        }
+        function sub (x,y) {
+            return x - y;
+        }
+        function multiply (x,y) {
+            return x * y;
+        }
+        function divide (x,y) {
+            return x / y;
+        }
+
+        function isEven(number) {
+            if (number % 2 === 0) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        console.log(isEven(4));
+
+        function isOdd(number) {
+            return number % 2 === 0 ? false : true;
+        }
+
+        function isValidEmail(email){
+            return email.includes("@") ? true : false;
+        }
+
+        console.log(isValidEmail('mike@gmail.com'));
+        
+        //GREET
+        function greet(name){
+            return `Hello ${name}!`;
+        }
+
+        console.log(greet('Jhonny'));
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<!--Alert from button-->
+<button onclick="alert('You clicked me!');">Click me</button>
+
+<script>
+//  VARIABLES - let is mutable and const is immutable 
+    //  Integer
+        let calculation = 2 + 2;
+        console.log(calculation + 2);
+
+        let concatStringAndNumbers = '1'+1; // Numbers in string is still a number until it uses + 
+        console.log('some'+'one'+ concatStringAndNumbers);
+    //  String
+        const message = "Hello";
+        console.log(message);
+    //  Reassignment
+        variable1 = 5;
+        console.log(variable1);
+
+        variable1 = variable1 + 1;
+        console.log(variable1);
+// BOOLEAN -------------------------------------------------------------------------------
+console.log(`----------- BOOLEAN -----------`);
+        if (false) {
+            console.log('The condition is true so I showed up');
+        } else {
+            console.log('The condition is FALSE so I showed up');
+        }
+
+    // COMPARISON Operators
+    console.log(`-----------COMPARISON OPERATORS -----------`);
+        const age = 16;
+
+        if (age >= 16) {
+            console.log('You CAN drive!');
+        } else if (age >= 14) {
+            console.log('Almost there')
+        }
+        else {
+            console.log('You CANNOT drive');
+        }
+
+    // LOGICAL Operators
+        console.log(`-----------LOGICAL OPERATORS -----------`);
+        console.log(!0);
+        console.log( true && false);
+        console.log( 1 > 0 && 1 < 0 );
+        console.log(true || false);
+        console.log( 1 > 0 || 1 < 0 );
+
+    console.log(!true);
+
+    // Ternary Operators
+        console.log(`-----------TERNARY OPERATORS -----------`);
+        const result = true ? 'truthy' : 'falsy';
+        console.log(result);
+
+        false && console.log('hello');
+
+        const message1 = true && 'hello';
+        console.log(message1);
+
+        const currency = undefined || 'USD';
+        console.log(currency)
+
+// FUNCTIONS -------------------------------------------------------------------------------
+    //FUNCTION SAMPLE 1
+        console.log(`-----------FUNCTIONS -----------`);
+        function function1(){
+            console.log('You called the Function 1');
+            console.log(2 + 2);
+        }
+
+        function1();
+
+    //FUNCTION SAMPLE 2
+        function calculateTax (cost, taxPercent = 0.1) {
+          console.log(cost * taxPercent );
+        }
+
+        calculateTax(2000, 0.2);
+        calculateTax(5000);
+        
+     // With PARAMETER and ARGUMENTS
+        function student(name) {
+            return `Hi ${name}!`;
+        }
+    
+        function percentageScore(score, total) {
+            return Math.round((score / total) * 100);  
+        }
+    
+        function studentVerdict(name, score, total) {
+            const studentName = student(name);
+            const overAll = percentageScore(score, total);
+
+            if (overAll >= 45){
+                return `${studentName} Your percentage score is ${overAll}% - You Passed!`;
+            } else {
+                return `${studentName} Your percentage score is ${overAll}% - You Failed!`;
+            } 
+        }
+    
+        console.log(studentVerdict('Alice', 40, 100)); 
+</script>
+    
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--9A-->
+    <button class="js-9A-button">9A</button>
+
+    <!--9B-->
+    <button class="js-9B-button">9B</button>
+
+    <!--9C--> <br><br>
+    <button class="js-heads" onclick="chooseButton('heads')">heads</button>
+    <button class="tails"  onclick="chooseButton('tails')">tails</button>
+
+    <p class="js-show">----</p>
+
+    <script>
+    // 9A
+    console.log(document.querySelector('.js-9A-button'));
+
+    // 9B
+    console.log(document.querySelector('.js-9B-button').innerHTML = '9B Done!');
+
+    // 9C
+    function chooseButton(choice) {
+           
+        const resultParagraph = document.querySelector('.js-show');
+
+        if (choice === 'heads') {
+                resultParagraph.innerHTML = 'You chose: Heads!';
+        } else if (choice === 'tails') {
+                resultParagraph.innerHTML = 'You chose: Tails!';
+        }
+    }
+    </script>
+</body>
+</html>

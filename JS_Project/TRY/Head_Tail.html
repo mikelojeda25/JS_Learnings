@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dice Guessing Game with Scoring and Local Storage</title>
+</head>
+<body>
+
+  <h1>Guess the Dice Roll (1-3)</h1>
+
+  <!-- Buttons to guess -->
+  <button onclick="playGame(1)">1</button>
+  <button onclick="playGame(2)">2</button>
+  <button onclick="playGame(3)">3</button>
+
+  <script>
+    // Initialize the score object, loading from localStorage if it exists
+    let scoreData = JSON.parse(localStorage.getItem('scoreData')) || { wins: 0, losses: 0 };
+
+    function playGame(guess) {
+      // Simulate a dice roll (1-3)
+      const diceRoll = Math.floor(Math.random() * 3) + 1;
+
+      // Use if-else structure to display the result and update score
+      if (guess === diceRoll) {
+        scoreData.wins++; // Increment wins if the guess is correct
+        alert(`You win! The dice rolled a ${diceRoll}. Wins: ${scoreData.wins}, Losses: ${scoreData.losses}`);
+      } else {
+        scoreData.losses++; // Increment losses if the guess is incorrect
+        alert(`You lose! The dice rolled a ${diceRoll}. Wins: ${scoreData.wins}, Losses: ${scoreData.losses}`);
+      }
+
+      // Save updated score data to localStorage
+      localStorage.setItem('scoreData', JSON.stringify(scoreData));
+    }
+
+    // Optional: Display initial score on page load
+    alert(`Current Score - Wins: ${scoreData.wins}, Losses: ${scoreData.losses}`);
+  </script>
+
+</body>
+</html>

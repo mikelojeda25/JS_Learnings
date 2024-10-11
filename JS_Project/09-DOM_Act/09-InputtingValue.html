@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label><b>NAME: </b></label>
+    <input placeholder="Name" class="js-string" onkeydown="handleCostKeydown(event)">
+    <button onclick="getValue()">Submit</button>
+
+    <p class="name-result">Your name is</p>
+
+    <script>
+        //On click submit - button //9E
+        function getValue() {
+            let result = document.querySelector('.js-string').value;
+
+            document.querySelector('.name-result')
+                .innerHTML = 'Your name is ' + result ;
+        }
+
+        function handleCostKeydown(event){
+            if(event.key == 'Enter') {
+                getValue();
+        }
+        }
+
+        
+
+
+    </script>
+</body>
+</html>

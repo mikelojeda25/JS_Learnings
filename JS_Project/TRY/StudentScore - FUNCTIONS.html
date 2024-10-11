@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title</title>
+</head>
+<body>
+    <script>
+        function greet(name) {
+            return `Hi ${name}!`;
+        }
+    
+        function percentageScore(score, total) {
+            return Math.round((score / total) * 100);  
+        }
+    
+        function studentVerdict(name, score, total) {
+            const student = greet(name);
+            const average = percentageScore(score, total);
+
+            if (average >= 45){
+                return `${student} Your percentage score is ${average}% - You Passed!`;
+            } else {
+                return `${student} Your percentage score is ${average}% - You Failed!`;
+            } 
+        }
+    
+        console.log(studentVerdict('Alice', 40, 200)); // Output: Hi Alice! Your percentage score is 50.00%
+        
+    </script>
+
+        
+</body>
+</html>

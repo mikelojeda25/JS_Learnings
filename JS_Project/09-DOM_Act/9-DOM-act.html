@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <button>9a</button>
+    <button class = "js-9b">9b</button>
+    <button class = "js-heads" onclick= "clickOptions('heads')">heads</button>
+    <button class = "js-tails" onclick= "clickOptions('tails')">tails</button>
+    <p class = "js-heads-tails-result"> </p>
+
+
+    <script>
+        //9A
+        console.log(document.querySelector('button'));
+        //9B
+        console.log(document.querySelector('button')
+            .innerHTML = '9b done');
+        //9C
+        function clickOptions (option) {
+            let result = document.querySelector('.js-heads-tails-result');
+            
+            if (option === 'heads') {
+                result.innerHTML = 'You chose: heads';
+            } else if (option === 'tails') {
+                result.innerHTML = 'You chose: tails';
+            }
+        }
+
+       
+    </script>
+</body>
+</html>

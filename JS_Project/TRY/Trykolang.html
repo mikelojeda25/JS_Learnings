@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    
+    <script>
+
+
+
+    //Activity 1
+        let hour = 18 ;
+        let result = '';
+        const name = 'Michael';
+
+        if (hour >= 6 && hour <= 12 ) {
+            result = 'Good Morning! ' + name;
+        }
+
+        else if (hour >= 13 && hour <= 17 ) {
+            result = 'Good Afternoon! ' + name;
+        } else {
+            result = 'Good night! ' + name;
+        }
+
+        console.log(result);
+
+    //Activity 2
+        let age = 10;
+        let resultDiscount = '';
+        const isHoliday = true;
+
+        if ((age <= 6 || age >=65) && !isHoliday) {
+            resultDiscount = 'Discount!';
+        } else {
+            resultDiscount = 'No discount!';
+        }
+        console.log(resultDiscount);
+
+
+        //Activity 3
+        const randomNumber = Math.random();
+        let flipCoin = '';
+
+        if (randomNumber < 0.5){
+            flipCoin = 'Heads';
+        } else {
+            flipCoin = 'Tails';
+        }
+
+        console.log(flipCoin);
+
+        const guess = 'Heads';
+
+        if (guess === flipCoin) {
+            console.log('You WIN!')
+        } else {
+            console.log('You LOSE!')
+        }
+
+        //Activity 4
+        const ranNum = Math.random();
+        let resultCoin =  '';
+
+        resultCoin = ranNum < 0.5 ? 'heads' : 'tails';
+        console.log(resultCoin);
+
+        const guess1 = 'heads';
+        console.log(guess1 === resultCoin ? 'You WIN!' : 'You LOSE!');
+
+        //Try
+        const ranNumber = Math.random();
+
+        console.log(ranNumber);
+
+        //Round off to the nearest integer
+        let x = Math.floor(Math.random() * 7);
+        let y = 10.388333333*100/100
+        
+
+        console.log(x);
+        console.log(y);
+
+
+
+
+
+
+    </script>
+
+
+</body>
+</html>   
